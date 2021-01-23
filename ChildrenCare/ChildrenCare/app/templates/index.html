@@ -6,9 +6,32 @@
   <meta charset="UTF-8">
   <title>{% block title %}Index{% endblock %}</title>
 </head>
-<body>
+<body onload="setHeader();"></body>>
   {% block pagecontent %}
-   
+  <center><h1>Anwesenheits-Liste</h1></center>
+  <div class="table-div">
+        <form>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Anwesend?</th>
+          <th>Name</th>
+          <th>Nachname</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for child in data %}
+          <tr>
+            <td><input type="checkbox" id="subscribeNews" name="subscribe"></td>
+            <td>{{ child.name }}</td>
+            <td>{{ child.nachname }}</td> 
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+          </form>
+        <center><button type="submit">Subscribe</button></center>
+  </div>
   {% endblock %}
 </body>
 </html>

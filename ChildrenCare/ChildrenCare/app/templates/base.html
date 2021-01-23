@@ -7,10 +7,10 @@
         {% block title %}test {% endblock %}
     </title>
 
-    <script src="{% static '/js/script.js' %}"></script> <!-- This is how to include a static file -->
+    <script src="{% static '/scripts/script.js' %}"></script> <!-- This is how to include a static file -->
     <link rel="stylesheet" href="{% static '/css/style.css' %}" type="text/css" />
   </head>
-  <body>
+  <body onload="setHeader();">
     {% include 'partials/nav-bar.html' %}
     <div class="container">
       {% block pagecontent %}

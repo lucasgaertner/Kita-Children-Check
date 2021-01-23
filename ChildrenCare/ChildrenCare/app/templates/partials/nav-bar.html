@@ -1,11 +1,16 @@
 <div class="header">
     <a href="#default" class="logo">Children Care</a>
     <div class="header-right">
-      <a class="active" href="#home">Childs</a>
-      <a href="data">data</a>
-      <a href="about">About</a>
+      <a id="home"  href="/" onclick="changedHeader('home')">Childs</a>
+      <a id="data"  href="/data" onclick="changedHeader('data')">data</a>
+      <a id="about" href="/about" onclick="changedHeader('about')">About</a>
+    {% if user.is_authenticated %}
+    <a href="{% url 'logout'%}?next={{request.path}}">Logout</a>
+    {% else %}
       <a href="sign">Sign In</a>
-      <a href="log">Log In</a>
+    <a href="{% url 'login'%}?next={{request.path}}">Login</a>
+    {% endif %}
     </div>
   </div>
+
  
