@@ -10,7 +10,7 @@ function setHeader(){
             var tmp_site = document.getElementById(location_arr[i]);
             tmp_site.classList.add('active');
         }
-        else if (last == "127.0.0.1:8000"){
+        else if (last == "127.0.0.1:8000" || last == "localhost:8000"){
             var tmp_site = document.getElementById('home');
             tmp_site.classList.add('active');
         }
@@ -19,6 +19,10 @@ function setHeader(){
             tmp_site.classList.add('active');
             var tmp_last = header_split[header_split.length-2];
             changedHeader(tmp_last);
+        }
+        else if(last == "?next="){
+            var tmp_site = document.getElementById('login');
+            tmp_site.classList.add('active');
         }
     }
 }
