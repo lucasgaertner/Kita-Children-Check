@@ -8,6 +8,7 @@
 </head>
 <body onload="setHeader();"></body>>
   {% block pagecontent %}
+{% if user.is_authenticated %}
   <center><h1>Anwesenheits-Liste</h1></center>
   <div class="table-div">
         <form>
@@ -32,6 +33,11 @@
           </form>
         <center><button type="submit">Subscribe</button></center>
   </div>
+  {% else %}
+  <div class="indexBox">
+<p>Please <a href="{% url 'login'%}?next={{request.path}}">login</a> see the Content! </p>
+  </div>
+  {% endif %}
   {% endblock %}
 </body>
 </html>

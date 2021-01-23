@@ -74,7 +74,7 @@ td{
     text-align: center;
 }
 
-button{
+button, #submit{
     height: 15%;
     width: 10%;
     padding-top: 1%;
@@ -86,3 +86,55 @@ button{
     box-shadow: 5pt 4pt 1pt aliceblue;
     border-radius: 4px;
 }
+
+
+/* LOGIN */
+.loginBox, .signup{
+    position: relative;
+    width: 25%;
+    height: 50%;
+    left: 35%;
+    margin-top: 15%;
+}
+
+.loginBox p, .loginBox a{
+  margin-left: 6%;
+  color: blueviolet;
+  font-size: 1.6vw;
+}
+
+.loginBox a{
+  margin-left: 40%;
+}
+
+.loginBox .loginText{
+  width: 5%;
+}
+
+.loginBox .loginInput{
+  width: 95%;
+}
+
+.loginInput input, #submit{
+  width: 100%;
+  font-size: 1.5vw;
+}
+
+.loginBox table{
+  padding-top: 10px;
+  padding-bottom:10px;
+  margin-bottom: 2%;
+}
+
+.loginBox tr{
+  line-height: 4.5vh;
+}
+
+.indexBox p{
+  color: blueviolet;
+  font-size: 5vw;
+  margin-left: 15%;
+  margin-top: 20%;
+}
+
+/* signup */

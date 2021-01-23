@@ -9,7 +9,13 @@
   </head>
   <body>
     {% block pagecontent %}
+      {% if user.is_authenticated %}
 
+      {% else %}
+        <div class="dataBox">
+           <p>Please <a href="{% url 'login'%}?next={{request.path}}">login</a> see the Content! </p>
+        </div>
+      {% endif %}
     {% endblock %}
   </body>
 </html>

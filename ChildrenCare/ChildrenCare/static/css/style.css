@@ -89,7 +89,7 @@ button, #submit{
 
 
 /* LOGIN */
-.loginBox{
+.loginBox, .signup{
     position: relative;
     width: 25%;
     height: 50%;
@@ -115,7 +115,7 @@ button, #submit{
   width: 95%;
 }
 
-.loginInput input, #submit{
+.loginInput input, #submit, .signup input{
   width: 100%;
   font-size: 1.5vw;
 }
@@ -128,4 +128,33 @@ button, #submit{
 
 .loginBox tr{
   line-height: 4.5vh;
+}
+
+.indexBox p, .dataBox p, .aboutBox p, .signup h2{
+  color: blueviolet;
+  font-size: 5vw;
+  margin-left: 15%;
+  margin-top: 20%;
+}
+
+/* signup */
+.signup{
+  width: 40%;
+  margin-top: 10%;
+}
+
+.signup .helptext, .signup ul{
+  display: none;
+}
+
+.signup p{
+  width: 100%;
+}
+
+.signup label{
+  width: 100%;
+}
+
+.signup button{
+  width: 100%;
 }

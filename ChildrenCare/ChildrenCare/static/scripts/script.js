@@ -1,4 +1,4 @@
-const location_arr = ['data', 'about'];
+const location_arr = ['data', 'about', 'signup', 'login'];
 
 function setHeader(){
     var currenturl = window.location.href;
@@ -7,16 +7,16 @@ function setHeader(){
     for (i=0; i < location_arr.length; i++){
         if (location_arr[i] == last){
             var tmp_site = document.getElementById(location_arr[i]);
-            tmp_site.classList.add("active");
+            tmp_site.classList.add('active');
         }
         else if (last == "127.0.0.1:8000"){
-            var tmp_site = document.getElementById("home");
-            tmp_site.classList.add("active");
+            var tmp_site = document.getElementById('home');
+            tmp_site.classList.add('active');
         }
     }
 }
 
 function changedHeader(link){
     var old_site = document.getElementById(link);
-    old_site.classList.remove("active");
+    old_site.classList.remove('active');
 }
