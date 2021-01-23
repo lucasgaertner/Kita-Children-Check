@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'app',
-    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -130,4 +129,4 @@ STATICFILES_DIRS = (
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-AUTH_USER_MODEL = 'app.User'
+LOGIN_REDIRECT_URL = '/'
