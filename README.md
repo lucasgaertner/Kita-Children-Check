@@ -1,6 +1,6 @@
 # Children Check
 
-
+![](https://github.com/lucasgaertner/Kita-Children-Check/blob/main/ChildrenCare/Images/Visualization.gif?raw=true)
 Children Check is a workflow for kindergarten employees designed for state processes
 
   - Upload Children data like name and lastname in to the database 
