@@ -1,5 +1,8 @@
 <div class="header">
-    <a href="#default" class="logo">Children Care</a>
+    <a href="https://www.lucasgaertner.github.io" class="logo">
+      {% load static %}
+      <img class="logoImage" src="{% static 'images/preschool.png' %}" alt="Logo"> 
+      </a>
     <div class="header-right">
       <a id="home"  href="/" onclick="changedHeader('home')">Childs</a>
       <a id="data"  href="/data" onclick="changedHeader('data')">data</a>

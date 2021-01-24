@@ -10,22 +10,26 @@
   {% block pagecontent %}
 {% if user.is_authenticated %}
   <center><h1>Anwesenheits-Liste</h1></center>
+  {% load static %}
+  <div class="kidsImage">
+  <img src="{% static 'images/kids.svg' %}" alt="playingKids"> 
+  </div>
   <div class="table-div">
         <form>
     <table class="table">
       <thead>
-        <tr>
+        <tr class="tableHeader">
           <th>Anwesend?</th>
           <th>Name</th>
           <th>Nachname</th>
         </tr>
       </thead>
       <tbody>
-        {% for child in data %}
-          <tr>
-            <td><input type="checkbox" id="subscribeNews" name="subscribe"></td>
-            <td>{{ child.name }}</td>
-            <td>{{ child.nachname }}</td> 
+        {% for profile in profiles %}
+        <tr>
+            <td class="checkBox"><input type="checkbox" id="subscribeNews" name="subscribe"></td>
+            <td>{{ profile.name }}</td>
+            <td>{{ profile.nachname }}</td> 
           </tr>
         {% endfor %}
       </tbody>
@@ -35,7 +39,9 @@
   </div>
   {% else %}
   <div class="indexBox">
+    {% load static %}
 <p>Please <a href="{% url 'login'%}?next={{request.path}}">login</a> see the Content! </p>
+<img src="{% static 'images/coffee.jpg' %}" alt="break&coffee">
   </div>
   {% endif %}
   {% endblock %}

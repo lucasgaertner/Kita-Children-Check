@@ -1,3 +1,11 @@
+
+:root {
+  --header-active: #80D9FF;
+  --font-header-color: #B39EFF;
+  --overview-header-color: #80D9ff;
+
+}
+
 .container {
     position: relative;
     height: 80%;
@@ -18,7 +26,7 @@ body {
 
 .header {
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #B39EFF;
   padding: 20px 10px;
 }
 
@@ -44,7 +52,7 @@ body {
 }
 
 .header a.active {
-  background-color: dodgerblue;
+  background-color: var(--header-active);
   color: white;
 }
 
@@ -64,14 +72,57 @@ body {
   }
 }
 
-
 table{
     width: 100%;
-    margin-top: 8%;
+    border-collapse: separate; 
+    border-spacing: 0 10px; 
+}
+
+thead{
+  line-height: 15vh;
+}
+
+.tableHeader{
+  color: var(--font-header-color);
+}
+
+.tableHeader.data{
+  line-height: 15vh;
+}
+
+tr:nth-child(even) {
+  background-color: #B39EFF;
+  opacity: 0.3;
+}
+
+tr:first-child td:first-child { border-top-left-radius: 10px; }
+tr:first-child td:last-child { border-top-right-radius: 10px; }
+tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+
+td, th{
+    text-align: right;
 }
 
 td{
-    text-align: center;
+  font-size: 3.3vh;
+}
+
+.checkBox{
+  width: 5%;
+  text-align: center;
+}
+
+#subscribeNews{
+  width:30px;
+  height:30px;
+  background:white;
+  border-radius:5px;
+  border:2px solid #555;
+}
+
+th{
+  font-size: 4.6vh;
 }
 
 button, #submit{
@@ -81,7 +132,7 @@ button, #submit{
     padding-bottom: 1%;
     font-size: 1.5vw;
     color: white;
-    background-color: blueviolet;
+    background-color: var(--font-header-color);
     border: none;
     box-shadow: 5pt 4pt 1pt aliceblue;
     border-radius: 4px;
@@ -99,7 +150,7 @@ button, #submit{
 
 .loginBox p, .loginBox a{
   margin-left: 6%;
-  color: blueviolet;
+  color: var(--font-header-color);
   font-size: 1.6vw;
 }
 
@@ -131,7 +182,7 @@ button, #submit{
 }
 
 .indexBox p, .dataBox p, .aboutBox p, .signup h2{
-  color: blueviolet;
+  color:  var(--font-header-color);;
   font-size: 5vw;
   margin-left: 15%;
   margin-top: 20%;
@@ -157,4 +208,71 @@ button, #submit{
 
 .signup button{
   width: 100%;
+}
+
+.UploadForm, .profiles{
+  position: relative;
+  width: 45%;
+  height: 50%;
+  margin-top: 5%;
+  margin-left: 30%;
+}
+
+.profiles{
+  margin-top: 0%;
+}
+
+.UploadForm button{
+  width: 100%;
+}
+
+.UploadForm input{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 22%;
+}
+
+.UploadForm h2, h1{
+  color:  var(--overview-header-color);
+  font-size: 5vh;
+}
+
+.UploadForm h3{
+  float: left;
+  color: var(--font-header-color);
+}
+
+
+.indexBox p{
+  margin-top: 10%
+}
+
+.indexBox img{
+  margin-left: 35%;
+  margin-top: 0%;
+}
+
+.kidsImage{
+  float: left;
+  height: 50%;
+  width: 34%;
+  margin-top: -5%;
+}
+
+.table-div{
+  float: right;
+  width: 50%;
+  margin-right: 8%;
+}
+
+button{
+  width: 62%;
+  margin-top: 2%;
+}
+.logoImage{
+  width: 28%;
+  padding: 0px;
+  margin-top: -3%;
+  margin-bottom: -5%;
+  padding-bottom: 1%;
 }
